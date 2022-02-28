@@ -5,10 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chelsea Banke</title>
-    <link rel="stylesheet" src="/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        header{
+            background-color: white;
+            box-shadow: 0px 1px 15px rgb(196, 196, 196);
+            padding-top: 5px;
+        }
+        #contact{
+            text-align: right;
+        }
+        a{
+            text-decoration: none;
+        }
+        #dropdown-menu{
+            display: none;
+        }
+        #dropdown-items{
+            display: none;
+            position: fixed;
+            right: -240px;
+            text-align: left;
+            background-color: white;
+            box-shadow: 0px 1px 15px rgb(196, 196, 196);
+            border-radius: 2px;
+        }
+        #dropdown-items a.btn{
+            text-align: left;
+        }
+        #dropdown-menu{
+            text-align: right;
+        }
+        #full-menu{
+            margin-left: -20px;
+        }
+        @media screen and (max-width: 765px) {
+            #full-menu{
+                display: none;
+            }
+            #dropdown-menu{
+                display: block;
+            }
+        }
+    </style>
 </head>
-<body>
-
+<body class="container-fluid">
+    <header class="row">
+        <div class="col-4 display-6 my-2">Portfolio</div>
+        <div class="col-3 btn-group text-center my-2" id="full-menu">
+            <a href="" class="btn">About</a>
+            <a href="" class="btn">Skills</a>
+            <a href="" class="btn">Achivements</a>
+            <a href="" class="btn">Projects</a>
+        </div>
+        <div class="col-5 my-3" id="contact"><a href="">Contact</a> | <a href="">Connect</a></div>
+        <div class="col-3 my-2" id="dropdown-menu">
+            <button type="button" onclick="dropdown()" class="btn" id="menu">
+                <img src="/justify.svg" alt="">
+            </button>
+        </div>
+    </header>
+    <div class="btn-group-vertical" id="dropdown-items">
+        <a href="" class="btn">About</a>
+        <a href="" class="btn">Skills</a>
+        <a href="" class="btn">Achivements</a>
+        <a href="" class="btn">Projects</a>
+    </div>
     <script src="/index.js"></script>
 </body>
 </html>
