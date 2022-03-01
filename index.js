@@ -8,13 +8,14 @@ function toogle(parameter){
     }
     return ret;
 }
-function dropdown(){
+function dropdown(){ 
+    const dropdown = document.getElementById("dropdown-items");
     dropdownToogle=toogle(dropdownToogle);
     if(dropdownToogle){
-        document.getElementById("dropdown-items").style.display="block";
+        dropdown.style.display="block";
     }
     else{
-        document.getElementById("dropdown-items").style.display="none";
+        dropdown.style.display="none";
     }
 }
 var dropdownToogle=false;
