@@ -9,13 +9,18 @@
     <style>
         body{
             background-color: aliceblue;
+            color: #5f5f5f;
         }
         header{
             background-color: white;
             box-shadow: 0px 1px 15px rgb(219, 219, 219);
             padding-top: 5px;
+        }
+        #salut{
+            margin-left: 10px;
+            margin-top: 20px;
             animation-name: onload;
-            animation-duration: 2s;
+            animation-duration: 1.5s;
         }
         #contact{
             text-align: right;
@@ -69,8 +74,8 @@
             background-color: #e8fafd;
         }
         @keyframes onload {
-            0%{margin-top: -100px;}
-            100%{margin-top: 0px}
+            0%{margin-top: -50px;}
+            100%{margin-top: 20px;}
         }
         @keyframes dropdown {
             0%{right: -300px;}
@@ -114,6 +119,13 @@
         <a href="" class="btn">Skills</a>
         <a href="" class="btn">Achivements</a>
         <a href="" class="btn">Projects</a>
+    </div>
+    <div class="row">
+        <div class="col-6 container">
+        </div>
+        <div class="col-6 container"> 
+            <h1 class="display-6" id="salut">Hello World</h1>
+        </div>
     </div>
     <script src="/index.js"></script>
 </body>
