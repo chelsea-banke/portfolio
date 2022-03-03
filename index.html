@@ -18,9 +18,10 @@
         }
         #salut{
             margin-left: 56%;
-            margin-top: 10px;
+            margin-top: 15px;
             animation-name: onload;
             animation-duration: 1.5s;
+            animation-fill-mode: forwards;
         }
         #contact{
             text-align: right;
@@ -76,9 +77,14 @@
         #contact a:hover{
             background-color: #e8fafd;
         }
+        #profile-pic{
+            margin-top: 40px;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px -3px rgb(219, 219, 219);
+        }
         @keyframes onload {
             0%{margin-top: -50px;}
-            100%{margin-top: 10px;}
+            100%{margin-top: 15px;}
         }
         @keyframes dropdown {
             0%{right: -300px;}
@@ -113,7 +119,7 @@
         <div class="col-5 my-3" id="contact"><a href="">Contact</a> | <a  href="">Connect</a></div>
         <div class="col-3 my-2" id="dropdown-menu">
             <button type="button" onclick="dropdown()" class="btn" id="menu">
-                <img src="/justify.svg" alt="">
+                <img src="/media/justify.svg" alt="">
             </button>
         </div>
     </header>
@@ -124,13 +130,13 @@
         <a href="" class="btn">Projects</a>
     </div>
     <h1 class="display-6" id="salut">Hello World</h1>
-    <!-- <div class="row">
-        <div class="col-6 container">
+    <div class="row" id="landing">
+        <div class="col-md-6 container text-center">
+            <img src="/media/profile.jpg" width="70%" class="" id="profile-pic">
         </div>
         <div class="col-6 container"> 
-
         </div>
-    </div> -->
+    </div>
     <script src="/index.js"></script>
 </body>
 </html>
