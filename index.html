@@ -16,12 +16,19 @@
             box-shadow: 0px 1px 15px rgb(219, 219, 219);
             padding-top: 5px;
         }
+        #landing{
+            background-color: white;
+            box-shadow: 0px 2px 10px -5px rgb(185, 185, 185);
+        }
         #salut{
             margin-left: 56%;
-            margin-top: 15px;
+            transform: translateY(12px);
             animation-name: onload;
             animation-duration: 1.5s;
-            animation-fill-mode: forwards;
+            z-index: -1;
+        }
+        .text-display{
+            font-size: xx-large;
         }
         #contact{
             text-align: right;
@@ -45,6 +52,7 @@
             border-radius: 2px;
             animation-name: dropdown;
             animation-duration: 1.5s;
+            z-index: 1;
         }
         #dropdown-items a.btn{
             text-align: left;
@@ -80,36 +88,61 @@
         #profile-pic{
             margin-top: 40px;
             border-radius: 5px;
-            box-shadow: 0px 5px 10px -3px rgb(219, 219, 219);
+            box-shadow: 0px 2px 10px -2px rgb(185, 185, 185);
         }
+        /* #dev{
+            background-color: #c2bcfc;
+            padding: 5px;
+            border-radius: 5px;
+        } */
         @keyframes onload {
-            0%{margin-top: -50px;}
-            100%{margin-top: 15px;}
+            0%{transform: translateY(-50px);}
+            100%{transform: translateY(12px);}
         }
         @keyframes dropdown {
             0%{right: -300px;}
             100%{right: -220px;}
         }
         @media screen and (max-width: 765px) {
+            header{
+                padding-top: 10px;
+            }
+            .text-display{
+                font-size: x-large;
+            }
             #full-menu{
                 display: none;
+            }
+            #name{
+            padding-top: 3px;
+            }
+            .full-name{
+                margin-top: -15px;
+                text-align: center;
             }
             #dropdown-menu{
                 display: block;
             }
             #contact a{
-                padding: 5px;
                 background-color: #d8f7fd;
                 border-radius: 5px;
-                font-size: 10px;
                 color: rgb(17, 0, 255);
+            }
+        }
+        @media screen and (max-width: 377px) {
+            #contact a{
+                padding: 8px;
+                font-size: 10px;
+            }
+            #salut{
+                font-size: large;
             }
         }
     </style>
 </head>
 <body class="container-fluid">
     <header class="row sticky-top">
-        <div class="col-4 display-6 my-2"><span style="color: #4538ff;">:) </span>Banke</div>
+        <div class="col-4 display-6 my-2" id="name"><span style="color: #4538ff;">:) </span>Banke</div>
         <div class="col-3 btn-group text-center my-2" id="full-menu">
             <a href="" class="btn">About</a>
             <a href="" class="btn">Skills</a>
@@ -129,12 +162,14 @@
         <a href="" class="btn">Achivements</a>
         <a href="" class="btn">Projects</a>
     </div>
-    <h1 class="display-6" id="salut">Hello World</h1>
+    <h1 class="display-6 text-display" id="salut">Hello World👋️,</h1>
     <div class="row" id="landing">
         <div class="col-md-6 container text-center">
             <img src="/media/profile.jpg" width="70%" class="" id="profile-pic">
         </div>
-        <div class="col-6 container"> 
+        <div class="col-md-6 container-flex my-4 py-1" id="landing-text"> 
+            <h1 class="display-6 full-name">I'm Chelsea Banke</h1><br>
+            <!-- <h1 class="display-4 text-left full-name" id="dev"><span style="color: rgb(185, 38, 38); font-weight: 400;">Web</span> <span style="color: yellow;">Dev</span></h1> -->
         </div>
     </div>
     <script src="/index.js"></script>
