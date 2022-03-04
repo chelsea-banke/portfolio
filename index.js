@@ -1,21 +1,24 @@
-function toogle(parameter){
+function toogle(parameter) {
     let ret;
     if(parameter){
-        ret=false;
+        ret = false;
     }
     else{
-        ret=true;
+        ret = true;
     }
     return ret;
 }
-function dropdown(){ 
-    const dropdown = document.getElementById("dropdown-items");
-    dropdownToogle=toogle(dropdownToogle);
-    if(dropdownToogle){
-        dropdown.style.display="block";
+
+var dropdownToogle = false;
+const menu = document.getElementById("menu");
+
+menu.addEventListener('click', function() {
+    let dropdown = document.getElementById("dropdown-items");
+    dropdownToogle = toogle(dropdownToogle);
+    if(dropdownToogle) {
+        dropdown.style.display = "block";
     }
     else{
-        dropdown.style.display="none";
+        dropdown.style.display = "none";
     }
-}
-var dropdownToogle=false;
+})
