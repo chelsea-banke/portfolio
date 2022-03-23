@@ -98,23 +98,61 @@
         /* #landing-text {
             position: relative;
         } */
+        #name{
+            text-align: center;
+            width: 200px;
+            border-radius: 100px;
+            box-shadow: 7px 7px 10px rgb(221, 221, 221) inset;
+            box-sizing: content-box;
+        }
         #links {
             /* position: absolute;
             bottom: 0px; */
+            /* border-radius: 100px;
+            box-shadow: 7px 7px 10px rgb(199, 199, 199) inset; */
+            /* margin: auto; */
             margin-top: 20%;
+            /* padding-top: 5px; */
         }
         #links img {
             width: 50px;
             margin: 5px;
             border-radius: 5px;
             /* border: 1px solid rgb(228, 228, 228); */
-            box-shadow: 4px 4px 4px 0px rgb(168, 168, 168), -8px -5px 1px 0px rgb(255, 255, 255);
+            box-shadow: 5px 5px 5px rgb(189, 189, 189), -5px -5px 5px rgb(255, 255, 255);
+            animation-name: onload-all;
+            animation-duration: 2s;
+        }
+        #links img:hover {
+            box-shadow: 5px 5px 5px rgb(255, 255, 255), -5px -5px 5px rgb(228, 228, 228);
         }
         /* #dev{
             background-color: #c2bcfc;
             padding: 5px;
             border-radius: 5px;
         } */
+        #switch{
+            position: absolute;
+            border-radius: 50px;
+            width: 50px;
+            height: 25px;
+            background: rgb(255, 255, 255);
+            box-shadow: 7px 7px 10px rgb(221, 221, 221) inset, 0px 7px 0px rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(230, 230, 230);
+            transform: translateY(20px);
+        }
+        #mode{
+            margin-top: auto;
+            /* background-color: rgb(224, 224, 224); */
+            width: 25px;
+            height: 25px;
+            border-radius: 100px;
+            box-shadow: 0px 7px 10px rgb(170, 214, 255) inset;
+            border: 1px solid rgb(230, 230, 230);
+        }
+        #switch:hover{
+            cursor: pointer;
+        }
         @keyframes onload {
             0%{transform: translateY(-50px);}
             100%{transform: translateY(50px);}
@@ -123,7 +161,19 @@
             0%{right: -300px;}
             100%{right: -220px;}
         }
+        @keyframes onload-all {
+            0%{
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0px);
+            opacity: 1;}
+        }
         @media screen and (max-width: 765px) {
+            #name{
+                width: 120%;
+            }
             #salut{
                 transform: translateY(30px);
             }
@@ -139,8 +189,8 @@
             #full-menu{
                 display: none;
             }
-            #name{
-            padding-top: 3px;
+            #name-container{
+                padding-top: 3px;
             }
             .full-name{
                 margin-top: -15px;
@@ -158,9 +208,9 @@
                 margin-top: 5%;
             }
             @keyframes onload {
-            0%{transform: translateY(-50px);}
-            100%{transform: translateY(30px);}
-        }
+                0%{transform: translateY(-50px);}
+                100%{transform: translateY(30px);}
+            }
         }
         @media screen and (max-width: 377px) {
             #contact a{
@@ -179,7 +229,8 @@
 </head>
 <body class="container-fluid">
     <header class="row sticky-top">
-        <div class="col-4 display-6 my-2" id="name"><span style="color: #4538ff;">(:</span>anke</div>
+        <div class="col-4 display-6 my-2" id="name-container">
+            <div id="name"><span style="color: #4538ff;">(: </span>Banke</div></div>
         <div class="col-3 btn-group text-center my-2" id="full-menu">
             <a href="" class="btn">About</a>
             <a href="" class="btn">Skills</a>
@@ -199,6 +250,7 @@
         <a href="" class="btn">Achivements</a>
         <a href="" class="btn">Projects</a>
     </div>
+    <div id="switch"><div id="mode"></div></div>
     <h1 class="display-6 text-display" id="salut">Hello World👋️,</h1>
     <div class="row" id="landing">
         <div class="col-md-6 container text-center">
@@ -208,10 +260,10 @@
             <h1 class="display-6 full-name" style="font-weight: 400; color: #6d6b6b;">I'm Chelsea Banke</h1><br>
             <div class="text-center" id="links">
                 <p class="mx-3 my-2">Connect with me on <span style="font-size: large; font-weight: bold;">&#8595</span></p>
-                <a href="" class="btn"><img src="/media/icons8-github.svg" alt="github"></a>
-                <a href="" class="btn"><img src="/media/twitter.png" alt="twitter"></a>
-                <a href="" class="btn"><img src="/media/Linkedin_icon.svg.png" alt="linkedIn"></a>
-                <a href="" class="btn"><img src="/media/Instagram.svg.png" alt="instagram"></a>
+                <a href="https://github.com/chelsea-banke" target="blank" class="btn"><img src="/media/icons8-github.svg" alt="github"></a>
+                <a href="https://twitter.com/ChelseaBanke" target="blank" class="btn"><img src="/media/twitter.png" alt="twitter"></a>
+                <a href="https://www.linkedin.com/in/chelsea-banke-65218120a/" target="blank" class="btn"><img src="/media/Linkedin_icon.svg.png" alt="linkedIn"></a>
+                <a href="" target="blank" class="btn"><img src="/media/Instagram.svg.png" alt="instagram"></a>
             </div>
         </div>
     </div>
