@@ -22,3 +22,35 @@ menu.addEventListener('click', function() {
         dropdown.style.display = "none";
     }
 })
+
+let scrollElements = document.querySelectorAll(".on-scroll");
+
+function intoView(element){
+    let fromTop = element.getBoundingClientRect().top;
+    return (
+        (fromTop <= window.innerHeight)
+    )
+}
+function outOfView(element){
+    let fromTop = element.getBoundingClientRect().top;
+    return (
+        (fromTop > window.innerHeight)
+    )
+}
+
+function detectElement(){
+    scrollElements.forEach(scrollElement => {
+        if (intoView(scrollElement)){
+            scrollElement.classList.remove("hide-element");
+            scrollElement.classList.add("show-element");
+        }
+        else if (outOfView(scrollElement)){
+            scrollElement.classList.remove("show-element");
+            scrollElement.classList.add("hide-element");
+        }
+    })
+}
+
+window.addEventListener("scroll", function(){
+    detectElement();
+})
