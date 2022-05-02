@@ -41,11 +41,11 @@ a{
     width: 100%;
     text-align: left;
     background-color: white;
-    box-shadow: 0px 1px 15px #d8f7fd;
+    box-shadow: 0px 1px 15px #d1d1d1;
     border-radius: 2px;
     animation-name: dropdown;
     animation-duration: 1s;
-    z-index: 1;
+    z-index: 2;
     top: 66px;
     opacity: 0.96;
 }
@@ -53,6 +53,7 @@ a{
     text-align: left;
     font-size: 14px;
     color: #5f5f5f;
+    border-bottom: 1px solid rgb(206, 206, 206);
 }
 #dropdown-items a.btn:hover{
     background-color: #e8fafd;
@@ -99,15 +100,8 @@ a{
     box-shadow: 7px 7px 10px rgb(221, 221, 221) inset;
     box-sizing: content-box;
 }
-#links {
-    /* position: absolute;
-    bottom: 0px; */
-    /* border-radius: 100px;
-    box-shadow: 7px 7px 10px rgb(199, 199, 199) inset; */
-    /* margin: auto; */
+#links-container {
     margin-top: 20%;
-    /* padding-top: 5px; */
-    /* border-top: 1px solid rgb(100, 100, 100); */
 }
 #links img {
     width: 50px;
@@ -126,7 +120,7 @@ a{
     padding: 5px;
     border-radius: 5px;
 } */
-#switch{
+.switch{
     position: absolute;
     border-radius: 50px;
     width: 50px;
@@ -136,7 +130,7 @@ a{
     border-bottom: 1px solid rgb(230, 230, 230);
     transform: translateY(20px);
 }
-#mode{
+.mode{
     margin-top: auto;
     /* background-color: rgb(224, 224, 224); */
     width: 25px;
@@ -145,7 +139,7 @@ a{
     box-shadow: 0px 7px 10px rgb(170, 214, 255) inset;
     border: 1px solid rgb(230, 230, 230);
 }
-#switch:hover{
+.switch:hover{
     cursor: pointer;
 }
 main{
@@ -184,6 +178,9 @@ article section{
     opacity: 1;
     animation: onload-all 2s;
 }
+#mobile-switch{
+    display: none;
+}
 @keyframes onload {
     0%{transform: translateY(-50px);}
     100%{transform: translateY(50px);}
@@ -221,6 +218,8 @@ article section{
         font-size: x-large;
     }
     #landing{
+        position: relative;
+        height: 80vh;
         margin-top: 55px;
         background-image: linear-gradient(0deg, #e6ffff, #ffffff, #fffdf0);
     }
@@ -231,7 +230,7 @@ article section{
         padding-top: 3px;
     }
     .full-name{
-        margin-top: -15px;
+        margin-top: -58%;
         text-align: center;
         width: 70%;
     }
@@ -242,9 +241,6 @@ article section{
         background-color: #d8f7fd;
         border-radius: 5px;
         color: rgb(17, 0, 255);
-    }
-    #links{
-        margin-top: 5%;
     }
     #tech-tools{
         margin-top: 50px;
@@ -261,6 +257,49 @@ article section{
         margin-top: 0px;
         border-radius: 10px;
     }
+    #links{
+        display: flex;
+        justify-content: space-between;
+        justify-content: flex-end;
+        bottom: 0px;
+        border-bottom: 1px solid black;
+        overflow: hidden;
+    }
+    #github-link{
+        border-left: 1px solid black;
+    }
+    #links-container {
+        position: absolute;
+        bottom: -20px;
+        right: 0px;
+        width: 100%; 
+    }
+    #links-container p{
+        text-align: right;
+    }
+    #links img {
+        width: 30px;
+        margin: 0px;
+        box-shadow: none;
+        /* border-bottom: 1px solid black; */
+    }
+    #mobile-switch{
+        position: relative;
+        display: block;
+        align-self: flex-end;
+        position: absolute;
+        margin-top: -43px;
+        right: -50px;
+    }
+    #pc-switch{
+        display: none;
+    }
+    #switch-carrier{
+        position: relative;
+        width: 80%;
+        height: 40px;
+        text-align: right;
+    }
 }
 @media screen and (max-width: 377px) {
     #contact a{
@@ -270,11 +309,8 @@ article section{
     #salut{
         font-size: large;
     }
-    #links img {
-        width: 30px;
-        margin: 0px;
-    }
     .full-name{
         text-align: left;
+        margin-top: -45%;
     }
 }
