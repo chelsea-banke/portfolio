@@ -208,7 +208,11 @@ article section{
         border-radius: 8px;
     }
     #salut{
-        transform: translateY(30px);
+        position: absolute;
+        transform: translateY(60px);
+        right: 0px;
+        width: 30%;
+        z-index: 1;
     }
     header{
         padding-top: 10px;
@@ -217,6 +221,7 @@ article section{
         font-size: x-large;
     }
     #landing{
+        margin-top: 55px;
         background-image: linear-gradient(0deg, #e6ffff, #ffffff, #fffdf0);
     }
     #full-menu{
@@ -228,6 +233,7 @@ article section{
     .full-name{
         margin-top: -15px;
         text-align: center;
+        width: 70%;
     }
     #dropdown-menu{
         display: block;
@@ -250,6 +256,11 @@ article section{
         0%{transform: translateY(-50px);}
         100%{transform: translateY(30px);}
     }
+    #profile-pic{
+        margin-left: -120px;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
 }
 @media screen and (max-width: 377px) {
     #contact a{
@@ -262,5 +273,8 @@ article section{
     #links img {
         width: 30px;
         margin: 0px;
+    }
+    .full-name{
+        text-align: left;
     }
 }
