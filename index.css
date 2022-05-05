@@ -248,7 +248,7 @@ article section{
     }
     #landing{
         position: relative;
-        height: 75vh;
+        height: 80vh;
         margin-top: 55px;
         background-image: linear-gradient(0deg, #e6ffff, #ffffff, #fffdf0);
     }
@@ -261,14 +261,19 @@ article section{
     #profile{
         position: relative;
         height: fit-content;
+        /* border-bottom: 1px solid rgb(0, 238, 255); */
     }
     .full-name{
         position: absolute;
-        bottom: -50px;
+        /* bottom: -50px; */
         /* margin-top: -45%; */
-        text-align: center;
-        width: 65%;
+        text-align: left;
+        padding: 5px;
+        width: 94%;
         text-decoration: none;
+        background-color: rgb(39, 39, 39);
+        color: rgb(228, 228, 228);
+        border-top: 1px solid white;
     }
     #dropdown-menu{
         display: block;
@@ -285,9 +290,13 @@ article section{
         margin-top: 50px;
     }
     #profile-pic{
-        margin-left: -120px;
+        /* margin-left: -120px; */
+        width: 100%;
         margin-top: 0px;
         border-radius: 10px;
+        opacity: 0.9;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
     #links{
         display: flex;
@@ -348,7 +357,7 @@ article section{
         /* border-right: 1px solid black; */
         /* right: 0px; */
         border: none;
-        /* border-top: 1px solid black; */
+        border: 1px solid black;
         top: -10px;
     }
     #spec-logos img{
@@ -362,11 +371,6 @@ article section{
         right: -15px;
         border-top: 1px solid black;
         /* border-left: 1px solid black; */
-    }
-    #data-logo{
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
-        border-top: 1px solid black;
     }
     #content{
         margin-top: 100px;
@@ -382,10 +386,10 @@ article section{
     }
     .full-name{
         text-align: left;
-        margin-top: -25%;
-        width: 70%;
+        /* margin-top: -25%; */
+        /* width: 100%; */
     }
     #landing{
-        height: 80vh;
+        height: 100vh;
     }
 }
