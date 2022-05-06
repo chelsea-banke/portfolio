@@ -8,9 +8,9 @@ header{
     padding-top: 5px;
 }
 #landing{
-    /* background-color: white; */
     background-image: linear-gradient(0deg, #e6ffff, #ffffff, #fffdf0);
     box-shadow: 0px 2px 10px -5px rgb(185, 185, 185);
+    border-bottom: 1px solid black;
 }
 #salut{
     margin-left: 56%;
@@ -37,7 +37,6 @@ a{
 #dropdown-items{
     display: none;
     position: fixed;
-    /* right: -220px; */
     width: 100%;
     text-align: left;
     background-color: white;
@@ -85,11 +84,8 @@ a{
     margin-top: 40px;
     border-radius: 5px;
     box-shadow: 0px 2px 10px -2px rgb(218, 218, 218);
-    border-top-left-radius: 30%;
+    border: 1px solid black;
 }
-/* .full-name{
-    margin-top: 30px;
-} */
 #landing-text {
     position: relative;
 }
@@ -104,13 +100,11 @@ a{
     position: absolute;
     bottom: 2%;
     right: 85px;
-    /* margin-top: 25%; */
 }
 #links img {
     width: 50px;
     margin: 5px;
     border-radius: 5px;
-    /* border: 1px solid rgb(228, 228, 228); */
     box-shadow: 5px 5px 5px rgb(189, 189, 189), -5px -5px 5px rgb(255, 255, 255);
     animation-name: onload-all;
     animation-duration: 2s;
@@ -118,11 +112,6 @@ a{
 #links img:hover {
     box-shadow: 5px 5px 5px rgb(255, 255, 255), -5px -5px 5px rgb(228, 228, 228);
 }
-/* #dev{
-    background-color: #c2bcfc;
-    padding: 5px;
-    border-radius: 5px;
-} */
 .switch{
     position: absolute;
     border-radius: 50px;
@@ -135,7 +124,6 @@ a{
 }
 .mode{
     margin-top: auto;
-    /* background-color: rgb(224, 224, 224); */
     width: 25px;
     height: 25px;
     border-radius: 100px;
@@ -234,11 +222,7 @@ article section{
         border-radius: 8px;
     }
     #salut{
-        position: absolute;
-        transform: translateY(60px);
-        right: 0px;
-        width: 30%;
-        z-index: 1;
+        display: none;
     }
     header{
         padding-top: 10px;
@@ -250,8 +234,10 @@ article section{
         position: relative;
         height: 75vh;
         margin-top: 55px;
-        /* background-image: linear-gradient(0deg, #000000, rgb(39, 39, 39), #fffdf0); */
-        border-bottom: 1px solid black;
+        background-image: none;
+        background-color: white;
+        box-shadow: none;
+        border-bottom: none;
     }
     #full-menu{
         display: none;
@@ -262,13 +248,9 @@ article section{
     #profile{
         position: relative;
         height: fit-content;
-        /* background-color: black; */
-        /* border-bottom: 1px solid rgb(0, 238, 255); */
     }
     .full-name{
         position: absolute;
-        /* bottom: -50px; */
-        /* margin-top: -45%; */
         text-align: left;
         padding: 5px;
         width: 102%;
@@ -295,32 +277,26 @@ article section{
         margin-top: 50px;
     }
     #profile-pic{
-        /* border: 5px solid rgb(39, 39, 39); */
+        border: 1px solid rgb(204, 204, 204);
         margin-left: -100px;
         width: 80%;
         margin-top: 0px;
-        border-radius: 100px;
-        /* opacity: 0.9; */
-        border-bottom-left-radius: 0px;
-        /* border-top-left-radius: 0px; */
+        border-radius: 10px;
     }
     #links{
         display: flex;
         justify-content: space-between;
         justify-content: flex-end;
         bottom: 0px;
-        /* border-bottom: 1px solid black; */
         overflow: hidden;
     }
-    /* #github-link{
-        border-left: 1px solid black;
-    } */
     #links-container {
         color: rgb(0, 0, 0);
         position: absolute;
         bottom: -0px;
         right: 0px;
         width: 100%; 
+        box-shadow: 0px 5px 10px rgb(223, 223, 223);
     }
     #links-container p{
         text-align: right;
@@ -330,7 +306,6 @@ article section{
         width: 30px;
         margin: 0px;
         box-shadow: none;
-        /* border-bottom: 1px solid black; */
     }
     #mobile-switch{
         position: relative;
@@ -357,16 +332,12 @@ article section{
         100%{transform: translateY(30px);}
     }
     #spec-logos{
-        /* margin-top: 0px; */
         position: relative;
         width: 100%;
         display: block;
         background-color:#daf5ff;
-        /* border-right: 1px solid black; */
-        /* right: 0px; */
         border: none;
-        border: 1px solid black;
-        /* top: -20px; */
+        box-shadow: 0px 0px 15px rgb(194, 194, 194);
     }
     #spec-logos img{
         display: inline-block;
@@ -377,9 +348,8 @@ article section{
         position: absolute;
         bottom: 15px;
         right: -15px;
-        border: 1px solid black;
+        box-shadow: 0px 5px 10px rgb(223, 223, 223);
         border-radius: 5px;
-        /* border-bottom: 1px solid black; */
     }
     #content{
         margin-top: 100px;
@@ -387,9 +357,6 @@ article section{
     #landing-text {
         height: 55%;
         background-color: rgb(255, 255, 255);
-        /* margin-right: -100px; */
-        /* width: 140%; */
-        /* background-color: #1f1f1f; */
     }
 }
 @media screen and (max-width: 377px) {
@@ -403,8 +370,6 @@ article section{
     .full-name{
         text-align: left;
         padding-left: 25px;
-        /* margin-top: -25%; */
-        /* width: 100%; */
     }
     #landing{
         height: 80vh;
