@@ -250,7 +250,7 @@ article section{
         position: relative;
         height: 80vh;
         margin-top: 55px;
-        background-image: linear-gradient(0deg, #000000, rgb(39, 39, 39), #fffdf0);
+        /* background-image: linear-gradient(0deg, #000000, rgb(39, 39, 39), #fffdf0); */
         border-bottom: 1px solid black;
     }
     #full-menu{
@@ -262,6 +262,7 @@ article section{
     #profile{
         position: relative;
         height: fit-content;
+        /* background-color: black; */
         /* border-bottom: 1px solid rgb(0, 238, 255); */
     }
     .full-name{
@@ -270,11 +271,14 @@ article section{
         /* margin-top: -45%; */
         text-align: left;
         padding: 5px;
-        width: 94%;
+        width: 102%;
         text-decoration: none;
-        background-color: rgb(39, 39, 39);
-        color: rgb(228, 228, 228);
+        background-color: rgb(255, 255, 255);
+        padding-left: 50px;
+        margin-left: -20px;
+        color: rgb(34, 34, 34);
         border-top: 1px solid white;
+        z-index: 1;
     }
     #dropdown-menu{
         display: block;
@@ -291,14 +295,14 @@ article section{
         margin-top: 50px;
     }
     #profile-pic{
-        border: 5px solid rgb(39, 39, 39);
-        /* margin-left: -120px; */
-        width: 100%;
+        /* border: 5px solid rgb(39, 39, 39); */
+        margin-left: -100px;
+        width: 80%;
         margin-top: 0px;
-        border-radius: 10px;
-        opacity: 0.9;
+        border-radius: 100px;
+        /* opacity: 0.9; */
         border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+        /* border-top-left-radius: 0px; */
     }
     #links{
         display: flex;
@@ -312,7 +316,7 @@ article section{
         border-left: 1px solid black;
     } */
     #links-container {
-        color: white;
+        color: rgb(0, 0, 0);
         position: absolute;
         bottom: -0px;
         right: 0px;
@@ -357,12 +361,12 @@ article section{
         position: relative;
         width: 100%;
         display: block;
-        background-color:#ffffff;
+        background-color:#daf5ff;
         /* border-right: 1px solid black; */
         /* right: 0px; */
         border: none;
         border: 1px solid black;
-        top: -20px;
+        /* top: -20px; */
     }
     #spec-logos img{
         display: inline-block;
@@ -373,11 +377,19 @@ article section{
         position: absolute;
         bottom: 15px;
         right: -15px;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+        border: 1px solid black;
+        border-radius: 5px;
+        /* border-bottom: 1px solid black; */
     }
     #content{
         margin-top: 100px;
+    }
+    #landing-text {
+        height: 55%;
+        background-color: rgb(255, 255, 255);
+        /* margin-right: -100px; */
+        /* width: 140%; */
+        /* background-color: #1f1f1f; */
     }
 }
 @media screen and (max-width: 377px) {
@@ -390,6 +402,7 @@ article section{
     }
     .full-name{
         text-align: left;
+        padding-left: 25px;
         /* margin-top: -25%; */
         /* width: 100%; */
     }
