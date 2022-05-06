@@ -248,7 +248,7 @@ article section{
     }
     #landing{
         position: relative;
-        height: 80vh;
+        height: 70vh;
         margin-top: 55px;
         /* background-image: linear-gradient(0deg, #000000, rgb(39, 39, 39), #fffdf0); */
         border-bottom: 1px solid black;
