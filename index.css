@@ -222,7 +222,9 @@ article section{
         border-radius: 8px;
     }
     #salut{
-        display: none;
+        margin-left: 68%;
+        transform: translateY(30px);
+        width: 100%;
     }
     header{
         padding-top: 10px;
@@ -256,7 +258,7 @@ article section{
         padding: 5px;
         width: 102%;
         text-decoration: none;
-        background-color: rgb(255, 255, 255);
+        background-color: #fffef6;
         padding-left: 50px;
         margin-left: -20px;
         color: rgb(34, 34, 34);
