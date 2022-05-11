@@ -246,6 +246,7 @@ article section{
         padding-top: 3px;
     }
     #profile{
+        background-image: url("/media/triangles-weds-16th-jan-2013-3.png");
         position: relative;
         height: fit-content;
     }
@@ -277,20 +278,27 @@ article section{
         margin-top: 50px;
     }
     #profile-pic{
-        border: 1px solid rgb(204, 204, 204);
+        border: none;
         margin-left: -100px;
         width: 80%;
         margin-top: 0px;
         border-radius: 10px;
     }
     #links{
+        width: 58%;
         display: flex;
         justify-content: space-between;
-        justify-content: flex-end;
         bottom: 0px;
         overflow: hidden;
+        margin-left: 42%;
+        overflow: visible;
+        background-color: rgba(0, 0, 0, 0.555);
+        border-top-left-radius: 5px;
+        padding-top: 10px;
+        border: 1px solid white;
     }
     #links-container {
+        background-image: url("/media/triangles-weds-16th-jan-2013-3.png");
         color: rgb(0, 0, 0);
         position: absolute;
         bottom: -0px;
@@ -299,7 +307,10 @@ article section{
         box-shadow: 0px 5px 10px rgb(223, 223, 223);
     }
     #links-container p{
+        color: white;
+        font-weight: bolder;
         text-align: right;
+        padding-right: 45px;
     }
     #links img {
         background-color: white;
@@ -337,7 +348,7 @@ article section{
         display: block;
         background-color:#daf5ff;
         border: none;
-        box-shadow: 0px 0px 15px rgb(194, 194, 194);
+        box-shadow: 0px 5px 10px rgb(194, 194, 194);
     }
     #spec-logos img{
         display: inline-block;
